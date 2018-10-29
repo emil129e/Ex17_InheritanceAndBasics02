@@ -18,12 +18,8 @@ namespace Ex17_InheritanceAndBasics02
             Quality = quality;
             Design = design;            
         }
-        public Amulet(string itemId, Level quality) : this(itemId, quality, "")
-        {
-        }
-        public Amulet(string itemId) : this(itemId, Level.medium, "")
-        {
-        }        
+        public Amulet(string itemId, Level quality) : this(itemId, quality, ""){}
+        public Amulet(string itemId) : this(itemId, Level.medium, ""){}        
         public override string ToString()
         {
             return $"ItemId: {ItemId}, Quality: {Quality}, Design: {Design}";

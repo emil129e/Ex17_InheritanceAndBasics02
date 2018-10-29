@@ -10,7 +10,7 @@ namespace Ex17_InheritanceAndBasics02
     public abstract class Merchandise
     {
         public string ItemId { get; set; }
-        
+
         //public Merchandise(string itemId)
         //{
         //    ItemId = itemId;
