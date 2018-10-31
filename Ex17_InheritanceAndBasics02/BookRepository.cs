@@ -9,8 +9,31 @@ namespace Ex17_InheritanceAndBasics02
     public class BookRepository
     {
         private List<Book> books = new List<Book>();
-        public void AddBook(Book book) { }
-        public Book GetBook(string itemId) { return books[0]; }
-        public double GetTotalValue() { return 1; }
+
+        public void AddBook(Book book)
+        {
+            books.Add(book);
+        }
+        public Book GetBook(string itemId)
+        {
+            for (int i = 0; i < books.Count; i++)
+            {
+                if (books[i].ItemId == itemId)
+                {
+                    return books[i];
+                }
+            }
+            return null;
+        }
+        public double GetTotalValue()
+        {
+            double value = 0;
+            for (int i = 0; i < books.Count; i++)
+            {
+                value += books[i].Price;
+            }
+            return value;
+        }
+
     }
 }
