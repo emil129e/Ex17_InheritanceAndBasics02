@@ -31,14 +31,20 @@ namespace Ex17_InheritanceAndBasics02
         }
         public static double GetValueOfCourse(Course course)
         {
-            double courseValue = 0;
-
-            if (course.DurationInMinutes > 0)
+            double initialPrice = 875;
+            double coursePrice = 0.0;
+            for (int i = 0; i < course.DurationInMinutes / 60; i++)
             {
-                course.DurationInMinutes /= 60;
-                courseValue = 875 * course.DurationInMinutes + 875;
+                coursePrice += 875;
             }
-            return courseValue;
+            if (course.DurationInMinutes == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return coursePrice + initialPrice;
+            }
         }
     }
 }
