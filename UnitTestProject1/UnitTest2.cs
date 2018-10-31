@@ -11,7 +11,7 @@ namespace UnitTestProject1
         Amulet a11, a12, a13;
         Course c111, c112;
         CourseRepository courses = new CourseRepository();
-        BookRepository books = new BookRepository();
+        MerchandiseRepository books = new MerchandiseRepository(); // test
         AmuletRepository amulets = new AmuletRepository();
 
 
@@ -42,9 +42,9 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestGetValueForBook()
         {
-            Assert.AreEqual(0.0, Utility.GetValueOfBook(b1));
-            Assert.AreEqual(0.0, Utility.GetValueOfBook(b2));
-            Assert.AreEqual(123.55, Utility.GetValueOfBook(b3));
+            Assert.AreEqual(0.0, MerchandiseRepository.GetValueOfMerchandise(b1));
+            Assert.AreEqual(0.0, MerchandiseRepository.GetValueOfMerchandise(b2));
+            Assert.AreEqual(123.55, MerchandiseRepository.GetValueOfMerchandise(b3));
             Assert.AreEqual(123.55, books.GetTotalValue());
         }
 
