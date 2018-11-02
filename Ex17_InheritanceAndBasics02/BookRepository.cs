@@ -34,6 +34,6 @@ namespace Ex17_InheritanceAndBasics02
             }
             return value;
         }
-
+        
     }
 }
