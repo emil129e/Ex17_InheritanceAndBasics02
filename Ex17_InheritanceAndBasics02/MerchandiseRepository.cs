@@ -26,13 +26,13 @@ namespace Ex17_InheritanceAndBasics02
         }
         public double GetTotalValue()
         {
-            if (merchandises[0] is Merchandise)
+            int x = 0;
+            if (merchandises[x] is Book)
             {
                 List<Book> books = new List<Book>();
-                foreach (var merchandise in merchandises)
-                {
-                    int x = 1;
-                    books[x] = (Book)merchandises[x];
+                foreach (Merchandise merchandise in merchandises)
+                {                    
+                    books.Add(merchandises[x] as Book);
                     x++;
                 }
                 double value = 0;
@@ -44,16 +44,18 @@ namespace Ex17_InheritanceAndBasics02
             }
             else 
             {
-                List<Amulet> amulets = new List<Amulet>();
-                foreach (var merchandise in merchandises)
-                {
-                    int i = 0;
-                    amulets[i] = (Amulet)merchandises[i];
-                }
                 double value = 0;
-                //for (int i = 0; i < merchandises.Count; i++)
+                //List<Amulet> amulets = new List<Amulet>();
+                foreach (Merchandise merchandise in merchandises)
+                {                    
+                    //amulets.Add((Amulet)merchandises[i]);
+                    value += Utility.GetValueOfMerchandise(merchandises[x]);
+                    x++;
+                }
+                //double value = 0;
+                //for (int i = 0; i < amulets.Count; i++)
                 //{
-                //    value += amulets[i].;
+                //    value += Utility.GetValueOfMerchandise(merchandises[i]);
                 //}
                 return value;
             }
