@@ -18,10 +18,8 @@ namespace Ex17_InheritanceAndBasics02
             Title = title;
             Price = price;
         }
-        public Book(string itemId, string title) : this(itemId, title, 0)
-        { }
-        public Book(string itemId) : this(itemId, "", 0)
-        { }
+        public Book(string itemId, string title) : this(itemId, title, 0)        { }
+        public Book(string itemId) : this(itemId, "", 0){ }
 
         public override string ToString()
         {
