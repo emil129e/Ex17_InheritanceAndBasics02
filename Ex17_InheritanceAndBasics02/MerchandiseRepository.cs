@@ -32,7 +32,7 @@ namespace Ex17_InheritanceAndBasics02
                 List<Book> books = new List<Book>();
                 foreach (Merchandise merchandise in merchandises)
                 {                    
-                    books.Add(merchandises[x] as Book);
+                    books.Add(merchandises[x] as Book);                    
                     x++;
                 }
                 double value = 0;
@@ -45,21 +45,13 @@ namespace Ex17_InheritanceAndBasics02
             else 
             {
                 double value = 0;
-                //List<Amulet> amulets = new List<Amulet>();
                 foreach (Merchandise merchandise in merchandises)
                 {                    
-                    //amulets.Add((Amulet)merchandises[i]);
                     value += Utility.GetValueOfMerchandise(merchandises[x]);
                     x++;
                 }
-                //double value = 0;
-                //for (int i = 0; i < amulets.Count; i++)
-                //{
-                //    value += Utility.GetValueOfMerchandise(merchandises[i]);
-                //}
                 return value;
             }
-
         }
     }
 }

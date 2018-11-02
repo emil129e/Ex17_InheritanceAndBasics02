@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Ex17_InheritanceAndBasics02
-{
+{    
     public class Utility
-    {
+    {        
         public static double GetValueOfMerchandise(Merchandise merchandise)
         {
             List<Merchandise> merchandises = new List<Merchandise>();
@@ -33,28 +33,8 @@ namespace Ex17_InheritanceAndBasics02
                 }
                 return qualityValue;
             }
-        }        
-        //public static double GetValueOfBook(Book book)
-        //{
-        //    return book.Price;
-        //}
-        //public static double GetValueOfAmulet(Amulet amulet)
-        //{
-        //    double qualityValue;
-        //    switch (amulet.Quality)
-        //    {
-        //        case Level.low:
-        //            qualityValue = 12.5;
-        //            break;
-        //        case Level.medium:
-        //            qualityValue = 20;
-        //            break;
-        //        default:
-        //            qualityValue = 27.5;
-        //            break;
-        //    }
-        //    return qualityValue;
-        //}
+        }   
+ 
         public static double GetValueOfCourse(Course course)
         {
             double initialPrice = 875;
